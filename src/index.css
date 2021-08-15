@@ -61,7 +61,7 @@ body {
   flex: auto;
   width: 100%;
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: hidden;
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow: inset 0 0 10px #000000;
@@ -72,7 +72,7 @@ body {
   flex: auto;
   width: 100%;
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: hidden;
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow: inset 0 0 10px #000000;
