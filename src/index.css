@@ -31,10 +31,10 @@ body {
 }
 .select-all-box-container button,
 .item-box button {
-  border: 0px;
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
+  width: 135px;
 }
 .select-all-box-container {
   width: 90%;
@@ -91,7 +91,6 @@ body {
 .btn-all-selected-active {
   background: #006a4d;
   color: #fff;
-  border: 0px;
 }
 .selector-message {
   padding-left: 10px;
@@ -100,6 +99,11 @@ body {
 .user-message {
   margin-left: 15px;
   margin-top: 10px;
+}
+
+button {
+  width: 140px;
+  border: 1px solid #006a4d;
 }
 
 @media screen and (min-width: 720px) {
