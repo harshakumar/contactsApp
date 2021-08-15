@@ -54,13 +54,13 @@ const ContactsApp = () => {
     );
     setSearchResults(results);
 
-    results.map((data) => {
-      if (data.selected === true) {
+    for (const key in results) {
+      if (results[key].selected === true) {
         selected = selected + 1;
       } else {
         nonselected = nonselected + 1;
       }
-    });
+    }
     results.length > 0 ? setShowSelectAllBtn(true) : setShowSelectAllBtn(false);
     if (selected > 0) {
       setSelectionCounter(selected);
