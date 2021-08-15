@@ -35,9 +35,6 @@ body {
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  border: 1px solid #efefef;
-  background: #efefef;
-  color: #000;
 }
 .select-all-box-container {
   width: 90%;

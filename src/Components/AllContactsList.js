@@ -5,9 +5,6 @@ const AllContactsList = (props) => {
     <ul className="all-items-container">
       {props.searchResults.map((data, ind) => (
         <li className="item-box" key={data.id}>
-          <h3>{data.full_name}</h3>
-          <p>{data.email}</p>
-          <p>{data.mobile}</p>
           <div className="button-container">
             <SelectButton
               searchResults={props.searchResults}
@@ -18,6 +15,9 @@ const AllContactsList = (props) => {
               setSelectionCounter={props.setSelectionCounter}
             />
           </div>
+          <h3>{data.full_name}</h3>
+          <p>{data.email}</p>
+          <p>{data.mobile}</p>
         </li>
       ))}
     </ul>

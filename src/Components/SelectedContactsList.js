@@ -14,9 +14,6 @@ const SelectedContactList = (props) => {
         .filter((fildata) => fildata.selected === true)
         .map((data, ind) => (
           <li className="item-box" key={data.id}>
-            <h3>{data.full_name}</h3>
-            <p>{data.email}</p>
-            <p>{data.mobile}</p>
             <div className="button-container">
               <SelectButton
                 searchResults={props.searchResults}
@@ -27,6 +24,9 @@ const SelectedContactList = (props) => {
                 currentData={data}
               />
             </div>
+            <h3>{data.full_name}</h3>
+            <p>{data.email}</p>
+            <p>{data.mobile}</p>
           </li>
         ))}
     </ul>
