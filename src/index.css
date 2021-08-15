@@ -19,14 +19,6 @@ body {
   background: #e5e7eb;
 }
 
-.content {
-  width: 100%;
-  padding: 10px;
-  float: left;
-
-  font-size: 1rem;
-}
-
 .item-box {
   margin: 10px 10px;
   background: #fff;
@@ -45,7 +37,7 @@ body {
   cursor: pointer;
 }
 .select-all-box-container {
-  width: 45%;
+  width: 90%;
   text-align: right;
 }
 
@@ -56,40 +48,45 @@ body {
 
 .items-section {
   width: 100%;
-  display: flex;
+  display: block;
   flex-direction: row;
   border-radius: 6px;
-  padding: 15px;
+  padding: 30px;
   background: #f3f4f6;
   margin: 10px;
-  max-height: 600px;
+}
+.items-section li {
+  list-style-type: none;
 }
 .all-items-container {
   flex: auto;
-  width: 50%;
+  width: 100%;
   overflow-y: scroll;
   overflow-x: scroll;
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow: inset 0 0 10px #000000;
   padding-right: 10px;
+  max-height: 600px;
 }
 .selected-items-container {
   flex: auto;
-  width: 50%;
+  width: 100%;
   overflow-y: scroll;
   overflow-x: scroll;
   -moz-box-shadow: inset 0 0 10px #000000;
   -webkit-box-shadow: inset 0 0 10px #000000;
   box-shadow: inset 0 0 10px #000000;
   padding-right: 10px;
-  margin-left: 10px;
+  margin-top: 30px;
+  padding: 5px;
+  max-height: 600px;
 }
 .seach-box-container input {
   height: 37px;
-  font-size: 20px;
-  width: 30%;
-  margin: 15px 0 0 15px;
+  font-size: 1.11rem;
+  width: 70%;
+  margin: 15px 0 10px 15px;
 }
 .btn-active,
 .btn-all-selected-active {
@@ -103,4 +100,30 @@ body {
 .user-message {
   margin-left: 15px;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 720px) {
+  .select-all-box-container {
+    width: 45%;
+    text-align: right;
+  }
+  .all-items-container {
+    width: 50%;
+  }
+
+  .items-section {
+    display: flex;
+    max-height: 600px;
+    padding: 15px;
+  }
+  .selected-items-container {
+    width: 50%;
+  }
+  .seach-box-container input {
+    width: 30%;
+  }
+  .selected-items-container {
+    margin-left: 10px;
+    padding: 0;
+  }
 }
