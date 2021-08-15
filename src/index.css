@@ -34,7 +34,12 @@ body {
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  width: 135px;
+}
+.select-all-box-container button {
+  width: 150px;
+}
+.item-box button {
+  width: 120px;
 }
 .select-all-box-container {
   width: 90%;

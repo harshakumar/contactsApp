@@ -47,10 +47,27 @@ const ContactsApp = () => {
   }, []);
 
   useEffect(() => {
+    let selected = 0;
+    let nonselected = 0;
     const results = contactState.filter((person) =>
       person.full_name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSearchResults(results);
+
+    results.map((data) => {
+      if (data.selected === true) {
+        selected = selected + 1;
+      } else {
+        nonselected = nonselected + 1;
+      }
+    });
+    results.length > 0 ? setShowSelectAllBtn(true) : setShowSelectAllBtn(false);
+    if (selected > 0) {
+      setSelectionCounter(selected);
+    }
+    selected > 0 && nonselected === 0
+      ? setIsBulkSelection(true)
+      : setIsBulkSelection(false);
     results.length > 0 ? setShowSelectAllBtn(true) : setShowSelectAllBtn(false);
   }, [searchTerm, contactState]);
 

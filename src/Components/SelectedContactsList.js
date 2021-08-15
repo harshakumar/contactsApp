@@ -4,11 +4,14 @@ const SelectedContactList = (props) => {
   return (
     <ul className="selected-items-container">
       <p className="selector-message">
-        {props.isBulkSelection === true
+        {props.searchTerm.length > 0
+          ? ""
+          : props.isBulkSelection === true
           ? "All contacts selected"
           : props.selectionCounter === 0
           ? "No contact selected"
           : props.selectionCounter + " Contact Selected"}
+        {}
       </p>
       {props.searchResults
         .filter((fildata) => fildata.selected === true)
